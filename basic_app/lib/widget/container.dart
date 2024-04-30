@@ -31,15 +31,24 @@ class MyWidget extends StatelessWidget {
       ),
       body: Center(
           child: Container(
-              child: Center(
         child: Text(
           "hello World",
-          style: TextStyle(fontSize: 25),
+          style: TextStyle(fontSize: 30, color: Colors.white),
         ),
-        color: Colors.cyanAccent,
-        height: 200,
-        width: 200,
-      ))),
+        height: 300,
+        width: double.infinity,
+        margin: EdgeInsets.all(20),
+        padding: EdgeInsets.all(50),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: Colors.purple,
+            border: Border.all(color: Colors.blueAccent, width: 5),
+            borderRadius: BorderRadius.circular(50),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black, offset: Offset(5, 5), blurRadius: 20),
+            ]),
+      )),
     );
   }
 }
