@@ -28,19 +28,53 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               TextButton(
                   style: ButtonStyle(
-                      foregroundColor: MaterialStateProperty.all(
-                    Colors.red,
-                  )),
+                      textStyle: MaterialStateProperty.all(
+                          TextStyle(fontSize: 30, color: Colors.black))),
                   onPressed: () {
                     print("clicked");
                   },
                   child: Text(
                     "Text Button",
-                  ))
+                  )),
+              TextButton.icon(
+                style: ButtonStyle(
+                    textStyle:
+                        MaterialStateProperty.all(TextStyle(fontSize: 30))),
+                onPressed: () {
+                  print("clicked");
+                },
+                onLongPress: () {
+                  print("hello");
+                },
+                icon: Icon(Icons.home),
+                label: Text("home"),
+              ),
+              ElevatedButton(
+                  style: ButtonStyle(
+                      foregroundColor: MaterialStateProperty.all(Colors.amber),
+                      backgroundColor: MaterialStateProperty.all(Colors.black),
+                      minimumSize: MaterialStateProperty.all(Size(100, 100))),
+                  onPressed: () {
+                    print("hello");
+                  },
+                  child: Text("signin")),
+              OutlinedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40))),
+                      side: MaterialStateProperty.all(
+                          BorderSide(color: Colors.black12, width: 10)),
+                      foregroundColor: MaterialStateProperty.all(Colors.blue),
+                      textStyle:
+                          MaterialStateProperty.all(TextStyle(fontSize: 25))),
+                  onPressed: () {
+                    print("welcome");
+                  },
+                  child: Text("sign up"))
             ],
           ),
         ),
