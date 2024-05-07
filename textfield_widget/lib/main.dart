@@ -58,8 +58,21 @@ class MyApp extends StatelessWidget {
                       labelStyle: TextStyle(color: Colors.red)),
                 ),
                 TextField(
-                  maxLength: 10,
-                  obscureText: false,
+                    maxLength: 10,
+                    obscureText: false,
+                    keyboardType: TextInputType.number),
+                TextField(
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(70),
+                        borderSide: BorderSide(color: Colors.black, width: 5)),
+                    label: Text("hello"),
+                  ),
+                ),
+                TextField(
+                  textAlign: TextAlign.center,
+                  decoration:
+                      InputDecoration(filled: true, fillColor: Colors.blue),
                 )
               ],
             ),
