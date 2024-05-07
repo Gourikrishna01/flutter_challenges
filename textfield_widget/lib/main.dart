@@ -74,7 +74,6 @@ class MyApp extends StatelessWidget {
                   decoration:
                       InputDecoration(filled: true, fillColor: Colors.blue),
                 ),
-                TextButton(onPressed: () {print("signin")}, child: Icon(Icons.))
               ],
             ),
           ),
