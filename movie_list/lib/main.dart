@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Movie_List());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Movie_List extends StatelessWidget {
+  const Movie_List({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +13,14 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Movie_List",
+            "FILMI",
             style: TextStyle(
-                color: Colors.black, fontWeight: FontWeight.w100, fontSize: 35),
+              color: Colors.amber,
+              fontSize: 20,
+            ),
           ),
           centerTitle: true,
-          backgroundColor: Colors.blueGrey,
-          leading: Icon(Icons.home),
-          actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.more_horiz))
-          ],
+          backgroundColor: Colors.black,
         ),
       ),
     );
