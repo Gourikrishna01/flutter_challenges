@@ -27,52 +27,68 @@ class MyApp extends StatelessWidget {
           shape:
               BeveledRectangleBorder(borderRadius: BorderRadius.circular(20)),
         ),
-        body: Center(
-            child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: CircleAvatar(
-                radius: 90,
-                backgroundColor: Colors.amber,
+        body: ListView(children: [
+          Center(
+              child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
                 child: CircleAvatar(
-                  radius: 80,
-                  backgroundColor: Colors.cyan,
-                  child: Text(
-                    "hello",
-                    style:
-                        TextStyle(fontSize: 30, fontWeight: FontWeight.normal),
-                  ),
-                  foregroundColor: Colors.black,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: CircleAvatar(
-                radius: 90,
-                child: Icon(
-                  Icons.verified_user,
-                  size: 50,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: CircleAvatar(
-                radius: 90,
-                backgroundImage: AssetImage('images/image1.jpeg'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: CircleAvatar(
                   radius: 90,
-                  backgroundImage: NetworkImage(
-                      'https://th.bing.com/th/id/OIP.Vtxy0FjT_EfudI4cQk1kzAHaE8?rs=1&pid=ImgDetMain')),
-            )
-          ],
-        )),
+                  backgroundColor: Colors.amber,
+                  child: CircleAvatar(
+                    radius: 80,
+                    backgroundColor: Colors.cyan,
+                    child: Text(
+                      "hello",
+                      style: TextStyle(
+                          fontSize: 30, fontWeight: FontWeight.normal),
+                    ),
+                    foregroundColor: Colors.black,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: CircleAvatar(
+                  radius: 90,
+                  child: Icon(
+                    Icons.verified_user,
+                    size: 50,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: CircleAvatar(
+                  radius: 90,
+                  backgroundImage: AssetImage('images/image1.jpeg'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: CircleAvatar(
+                    radius: 90,
+                    backgroundImage: NetworkImage(
+                        'https://th.bing.com/th/id/OIP.Vtxy0FjT_EfudI4cQk1kzAHaE8?rs=1&pid=ImgDetMain')),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: CircleAvatar(
+                    radius: 90,
+                    backgroundImage: NetworkImage(
+                        'https://th.bing.com/th/id/OIP.Vtxy0FjT_EfudI4cQk1kzAHaE8?rs=1&pid=ImgDetMain')),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: CircleAvatar(
+                    radius: 90,
+                    backgroundImage: NetworkImage(
+                        'https://th.bing.com/th/id/OIP.Vtxy0FjT_EfudI4cQk1kzAHaE8?rs=1&pid=ImgDetMain')),
+              )
+            ],
+          )),
+        ]),
       ),
     );
   }
