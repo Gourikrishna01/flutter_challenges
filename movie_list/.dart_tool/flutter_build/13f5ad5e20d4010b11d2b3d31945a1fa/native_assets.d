@@ -1,1 +1,0 @@
- C:\\flutter_challenges\\movie_list\\.dart_tool\\flutter_build\\13f5ad5e20d4010b11d2b3d31945a1fa\\native_assets.yaml: 
