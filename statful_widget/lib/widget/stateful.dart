@@ -53,7 +53,7 @@ class _MyWidgetState extends State<MyWidget> {
         children: [
           Text(
             text,
-            style: TextStyle(color: Colors.black, fontSize: 30),
+            style: TextStyle(color: Colors.black87, fontSize: 30),
           ),
           ElevatedButton(
               onPressed: () {
