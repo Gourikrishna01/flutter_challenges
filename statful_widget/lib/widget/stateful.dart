@@ -69,7 +69,7 @@ class _MyWidgetState extends State<MyWidget> {
               },
               child: Text(
                 "previous button",
-                style: TextStyle(color: Colors.black, fontSize: 20),
+                style: TextStyle(color: Colors.blueAccent, fontSize: 20),
               ))
         ],
       )),
