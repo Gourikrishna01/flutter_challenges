@@ -68,7 +68,7 @@ class _MyWidgetState extends State<MyWidget> {
                 changeHText();
               },
               child: Text(
-                "previous",
+                "previous button",
                 style: TextStyle(color: Colors.black, fontSize: 20),
               ))
         ],
