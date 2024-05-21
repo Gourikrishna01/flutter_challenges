@@ -9,6 +9,7 @@ class MyWidget extends StatefulWidget {
 
 class _MyWidgetState extends State<MyWidget> {
   var text = "hello World";
+  var coloricon = Colors.black;
   void changeText() {
     setState(() {
       text = "Good Morning";
@@ -18,6 +19,16 @@ class _MyWidgetState extends State<MyWidget> {
   void changeHText() {
     setState(() {
       text = "Hello World";
+    });
+  }
+
+  void colorchange() {
+    setState(() {
+      if (coloricon == Colors.black) {
+        coloricon = Colors.blue;
+      } else {
+        coloricon = Colors.black;
+      }
     });
   }
 
@@ -70,7 +81,26 @@ class _MyWidgetState extends State<MyWidget> {
               child: Text(
                 "previous button",
                 style: TextStyle(color: Colors.blueAccent, fontSize: 20),
-              ))
+              )),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                  onPressed: () {
+                    colorchange();
+                  },
+                  icon: Icon(
+                    Icons.thumb_up,
+                  ),
+                  iconSize: 50,
+                  color: coloricon),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.thumb_down),
+                iconSize: 50,
+              )
+            ],
+          )
         ],
       )),
     );
