@@ -48,7 +48,7 @@ class _MyWidgetState extends State<MyWidget> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "stateful widget",
+          "stateful_widget",
           style: TextStyle(
             color: Colors.blueAccent,
             fontSize: 30,
