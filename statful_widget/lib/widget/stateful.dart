@@ -10,6 +10,7 @@ class MyWidget extends StatefulWidget {
 class _MyWidgetState extends State<MyWidget> {
   var text = "hello World";
   var coloricon = Colors.black;
+  var iconcolor = Colors.blue;
   void changeText() {
     setState(() {
       text = "Good Morning";
@@ -28,6 +29,16 @@ class _MyWidgetState extends State<MyWidget> {
         coloricon = Colors.blue;
       } else {
         coloricon = Colors.black;
+      }
+    });
+  }
+
+  void color() {
+    setState(() {
+      if (iconcolor == Colors.blue) {
+        iconcolor = Colors.red;
+      } else {
+        iconcolor = Colors.blue;
       }
     });
   }
@@ -95,10 +106,12 @@ class _MyWidgetState extends State<MyWidget> {
                   iconSize: 50,
                   color: coloricon),
               IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.thumb_down),
-                iconSize: 50,
-              )
+                  onPressed: () {
+                    color();
+                  },
+                  icon: Icon(Icons.thumb_down),
+                  iconSize: 50,
+                  color: iconcolor),
             ],
           )
         ],
