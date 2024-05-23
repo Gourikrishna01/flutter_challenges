@@ -5,6 +5,7 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // int index = 0;
     return Scaffold(
       //App bar
       appBar: AppBar(
@@ -28,6 +29,29 @@ class MyWidget extends StatelessWidget {
         ),
         //elevation//
         elevation: 10.5,
+      ),
+
+//bottom Navigation//
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "home",
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.dashboard),
+              label: "dashboard",
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: "settings",
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_2),
+              label: "profile",
+              backgroundColor: Colors.blue),
+        ],
+        currentIndex: 0,
       ),
       body: Center(
           child: Container(
