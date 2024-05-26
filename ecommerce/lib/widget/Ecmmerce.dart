@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import '../Pages/Product.dart';
+import '../Pages/Registration.dart';
+import '../Pages/login.dart';
+import '../Pages/About.dart';
+import '../Pages/Contact.dart';
 
 class MyWidget extends StatefulWidget {
   const MyWidget({super.key});
@@ -127,7 +131,7 @@ class _MyWidgetState extends State<MyWidget> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Product()));
+                      MaterialPageRoute(builder: (context) => Registration()));
                 },
                 child: Text(
                   "Registration",
@@ -136,7 +140,7 @@ class _MyWidgetState extends State<MyWidget> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Product()));
+                      MaterialPageRoute(builder: (context) => Login()));
                 },
                 child: Text(
                   "Login",
@@ -145,7 +149,7 @@ class _MyWidgetState extends State<MyWidget> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Product()));
+                      MaterialPageRoute(builder: (context) => About()));
                 },
                 child: Text(
                   "About",
@@ -154,7 +158,7 @@ class _MyWidgetState extends State<MyWidget> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Product()));
+                      MaterialPageRoute(builder: (context) => Contact()));
                 },
                 child: Text(
                   "Contact",
