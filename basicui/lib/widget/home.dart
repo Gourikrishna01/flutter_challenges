@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import '../pages/login.dart';
+import '../pages/Register.dart';
+import '../pages/dashboard.dart';
+import '../pages/search.dart';
 
 class MyWidget extends StatefulWidget {
   const MyWidget({super.key});
@@ -9,7 +12,25 @@ class MyWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyWidget> {
-  @override
+  var indexnum = 0;
+  List Tabwidgets = [
+    Text(
+      "home",
+      style: TextStyle(color: Colors.black, fontSize: 30),
+    ),
+    Text(
+      "Dashboard",
+      style: TextStyle(color: Colors.black, fontSize: 30),
+    ),
+    Text(
+      "Profile",
+      style: TextStyle(color: Colors.black, fontSize: 30),
+    ),
+    Text(
+      "Settings",
+      style: TextStyle(color: Colors.black, fontSize: 30),
+    ),
+  ];
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -25,9 +46,44 @@ class _MyWidgetState extends State<MyWidget> {
           backgroundColor: Colors.green,
           leading: Icon(Icons.home),
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Search()));
+                },
+                icon: Icon(Icons.search)),
             IconButton(onPressed: () {}, icon: Icon(Icons.more_horiz))
           ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "home",
+              backgroundColor: Colors.green,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.dashboard),
+              label: "Dashboard",
+              backgroundColor: Colors.blue,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: "Person",
+              backgroundColor: Colors.red,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: "Settings",
+              backgroundColor: Colors.indigo,
+            ),
+          ],
+          currentIndex: indexnum,
+          onTap: (int index) {
+            setState(() {
+              indexnum = index;
+            });
+          },
         ),
         drawer: Drawer(
           backgroundColor: Colors.blue,
@@ -64,7 +120,10 @@ class _MyWidgetState extends State<MyWidget> {
                     color: Colors.black,
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Register()));
+                },
               ),
               ListTile(
                 leading: Icon(Icons.dashboard_customize),
@@ -75,10 +134,16 @@ class _MyWidgetState extends State<MyWidget> {
                     color: Colors.black,
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Dashboard()));
+                },
               ),
             ],
           ),
+        ),
+        body: Center(
+          child: Tabwidgets.elementAt(indexnum),
         ),
       ),
     );

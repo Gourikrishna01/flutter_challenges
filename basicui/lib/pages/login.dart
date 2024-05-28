@@ -10,14 +10,26 @@ class Login extends StatelessWidget {
         appBar: AppBar(
           title: Text("Login"),
         ),
-        body: Column(
-          children: [
-            Text("hello"),
-            TextField(
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Text("lOGIN"),
+              TextField(
                 decoration: InputDecoration(
-              label: Text("enter the username"),
-            ))
-          ],
+                    label: Text("enter the username"), hintText: "username"),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    label: Text("enter the Password"), hintText: "Password"),
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text("home"))
+            ],
+          ),
         ),
       ),
     );
