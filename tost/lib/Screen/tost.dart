@@ -49,10 +49,7 @@ class _TostState extends State<Tost> {
 
   void showToast() {
     Fluttertoast.showToast(
-      toastLength: Toast.LENGTH_LONG,
-      backgroundColor: Colors.orange,
       msg: 'Successfully',
-      textColor: Colors.blue,
       gravity: ToastGravity.TOP,
     );
   }
