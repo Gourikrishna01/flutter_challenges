@@ -28,7 +28,8 @@ class _Page3State extends State<Page3> {
                       ));
                 },
                 child: Text("Page3")),
-            Text(Provider.of<Providerdemo>(context).test1)
+            Text(Provider.of<Providerdemo>(context).test1),
+            Provider.of<Providerdemo>(context).widget(),
           ],
         ),
       ),

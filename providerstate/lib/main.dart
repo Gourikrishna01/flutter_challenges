@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:providerstate/provider/providerdemo.dart';
+import 'package:providerstate/provider/providerdemo2.dart';
 
 import 'page1.dart';
 
@@ -14,8 +15,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-        create: (context) => Providerdemo(),
-        child: MaterialApp(title: 'Flutter Demo', home: Page1()));
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => Providerdemo(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => Providerdemo2(),
+        )
+      ],
+      child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          home: Page1()),
+    );
   }
 }

@@ -13,6 +13,7 @@ class Page1 extends StatefulWidget {
 class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
+    print("page1 rebuild");
     return Scaffold(
       body: Center(
         child: Column(
@@ -27,7 +28,16 @@ class _Page1State extends State<Page1> {
                       ));
                 },
                 child: Text("Page1")),
-            Text(Provider.of<Providerdemo>(context).test1)
+            Consumer<Providerdemo>(builder: (context, value, child) {
+              return Text(value.test1);
+            }),
+            ElevatedButton(
+                onPressed: () {
+                  Provider.of<Providerdemo>(context, listen: false)
+                      .changeValue("code.....");
+                },
+                child: Text("change")),
+            Provider.of<Providerdemo>(context).widget(),
           ],
         ),
       ),
